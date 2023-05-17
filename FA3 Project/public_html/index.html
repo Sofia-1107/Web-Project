@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sagar Ratna</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS Files/owl.carousel.min.css">
+        <link rel="stylesheet" href="CSS Files/owl.theme.default.min.css">
+        <script src="JS Files/jquery.min.js"></script>
+        <script src="JS Files/owl.carousel.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS Files/index.css">
+        <script type="text/javascript" src="JS Files/index.js"></script>
+    </head>
+    <body onload="begin();">
+        <div class="navbar navbar-fixed-top" style="background-color: white;">
+            <div class="container">
+                <h1><a href="index.html"><img src="Images/Sagar Ratna.png" style="height:100%;"></a></h1>
+                <p style="font-size:19px; color:#4d4d4d;">South Indian,North Indian,Chinese - Veg Restaurant</p>
+                <p><span style="color:#fa8072; font-size:19px;">Open now  </span><span style="font-size:19px; color:#999999">8am - 11pm (Today)</p></br>
+                <div style=" border-bottom: 1px solid grey;"></div>
+            </div>
+        </div>
+        <div id="container" class="container">
+            <div class="owl-carousel owl-theme" style="margin-top: 200px;">
+                <img class="item" src="Images/dosa.jpg">
+                <img class="item" src="Images/dahi vada.jpg">
+                <img class="item" src="https://th.bing.com/th/id/OIP.1djzGETtiT8wV18cmlb5rAHaE7?pid=Api&rs=1">
+                <img class="item" src="Images/rasgulla.PNG">
+                <img class="item" src="https://th.bing.com/th/id/OIP.D2j2SAQWtMEQBeSwV16Q1gHaFE?w=279&h=192&c=7&o=5&dpr=1.25&pid=1.70">
+                <img class="item" src="https://th.bing.com/th/id/OIP.IsO36caqcnyRaGVsThrA5gHaE6?pid=Api&rs=1">
+                <img class="item" src="https://th.bing.com/th/id/OIP.Lj70OKt-y-deSB8RjK6_9gHaLH?pid=Api&rs=1">
+            </div>
+            <div class="col-sm-3" id="sidebar" style="position:sticky;top:225px;">
+                <br>
+                <button onclick="scrollToDiv('starters');">Starters</button>
+                <button onclick="scrollToDiv('dosas');">Dosas</button>
+                <button onclick="scrollToDiv('thali');">Thali</button>
+                <button onclick="scrollToDiv('southindian');">South Indian Rice</button>
+                <button onclick="scrollToDiv('northindian');">North Indian</button>
+                <button onclick="scrollToDiv('chinese');">Chinese</button>
+                <button onclick="scrollToDiv('dessert');">Dessert</button>
+            </div>
+            <div class="col-sm-1">
+                <div><br></div>
+                <div id="verticalBorder" style="padding-top:4100px;border-left: 1px solid grey;">&nbsp;</div>    
+            </div>
+            <div class="col-sm-8" id="menu">
+                <div id="starters">
+                    <h2>Starters</h2>
+                    <div class="row margin-Bottom">
+                        <div class="row margin-Bottom">
+                            <div class="col-sm-9"><h4 id="name1"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp;<span id="n1">Aplam</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price1">30</span></p></div>
+                            <div id="add1" class="col-sm-3 btn-padding">
+                                <button onclick="quantButton('1')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                            </div>
+                            <div id="quant1" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                                <button class="btn btn-default side-button" onclick="quantDec(1)" style="outline: none;">-</button>
+                                <button class="btn btn-default middle-button" id="val1" disabled>0</button>
+                                <button class="btn btn-default side-button" onclick="quantInc(1)" style="outline: none;">+</button>
+                            </div>
+                        </div>
+                        <div class="row margin-Bottom">
+                            <div class="col-sm-9"><h4 id="name2"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n2">Upma</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price2">120</span></p></div>
+                            <div id="add2" class="col-sm-3 btn-padding">
+                                <button onclick="quantButton('2')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                            </div>
+                            <div id="quant2" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                                <button class="btn btn-default side-button" onclick="quantDec(2)" style="outline: none;">-</button>
+                                <button  class="btn btn-default middle-button" id="val2" disabled>0</button>
+                                <button class="btn btn-default side-button" onclick="quantInc(2)" style="outline: none;">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="dosas">
+                    <h2>Dosas</h2>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name3"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n3">Plain Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price3">145</span></p></div>
+                        <div id="add3" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('3')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant3" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(3)" style="outline: none;">-</button>
+                            <button  class="btn btn-default middle-button" id="val3" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(3)" style="outline: none">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name4"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n4">Masala Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price4">180</span></p></div>
+                        <div id="add4" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('4')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant4" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(4)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val4" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(4)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row  margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name5"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n5">Rava Coconut Plain Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price5">200</span></p></div>
+                        <div id="add5" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('5')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant5" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(5)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val5" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(5)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-bottom">
+                        <div class="col-sm-9"><h4 id="name6"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n6">Chettinad Plain Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price6">210</span></p></div>
+                        <div id="add6" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('6')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant6" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(6)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val6" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(6)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name7"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n7">Spring Roll Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price7">195</span></p></div>
+                        <div id="add7" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('7')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant7" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(7)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val7" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(7)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name8"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n8">Hot Garlic Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price8">195</span></p></div>
+                        <div id="add8" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('8')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant8" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(8)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val8" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(8)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name9"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n9">Sagar Special Paneer Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price9">220</span></p></div>
+                        <div id="add9" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('9')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant9" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button"  onclick="quantDec(9)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val9" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(9)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name10"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n10">Mysore Paneer Dosa</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price10">225</span></p></div>
+                        <div id="add10" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('10')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant10" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(10)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val10" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(10)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="thali">
+                    <h2>Thali</h2> 
+                    <div class="row margin-Bottom">
+                        <div class="col-md-9"><h4 id="name39"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp;<span id="n39">Sagar Special Thali</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price39">275</span></p><p style="margin-left: 20px;">2 Vegetables + Dal + Flavoured Rice + Rasam + Sambhar + 4 Pooris + Rice<br>+ Aplam + Pickle + Curd + Sweet</p></div>
+                        <div id="add39" class="col-md-3 btn-padding">
+                            <button onclick="quantButton('39')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant39" class="col-md-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(39)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val39" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(39)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-bottom">
+                        <div class="col-md-9"><h4 id="name40"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n40">Executive Thali</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price40">280</span></p><p style="margin-left: 20px;">Shahi Paneer + Dal Makhani +One Baby Naan + One Parantha + Vegetable<br>Pulao + Papad + Salad + Pickle</p></div>
+                        <div id="add40" class="col-md-3 btn-padding">
+                            <button onclick="quantButton('40')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant40" class="col-md-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(40)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val40" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(40)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-md-9"><h4 id="name41"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n41">Deluxe Thali</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price41">300</span></p><p style="margin-left: 20px;">Shahi Paneer + Mix Vegetable + Dal Makhani + One Baby Naan + One<br>Parantha + Vegetable Pulao + Raita + Papad + Salad + Pickle + Sweet</p></div>
+                        <div id="add41" class="col-md-3 btn-padding">
+                            <button onclick="quantButton('41')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant41" class="col-md-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button"  onclick="quantDec(41)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val41" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(41)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="southindian">
+                    <h2>South Indian Rice</h2>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name11"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n11">Lemon Rice</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price11">180</span></p></div>
+                        <div id="add11" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('11')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant11" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(11)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val11" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(11)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name12"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n12">Curd Rice</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price12">180</span></p></div>
+                        <div id="add12" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('12')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant12" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(12)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val12" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(12)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name13"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n13">Puliyoare Rice</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price13">180</span></p></div>
+                        <div id="add13" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('13')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant13" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(13)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val13" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(13)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="northindian">
+                    <h2>North Indian</h2>
+                    <p style="color:#999999; font-size:15px;">SNACKS</p>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name14"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n14">Vegetable Pokora</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price14">175</span></p></div>
+                        <div id="add14" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('14')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant14" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(14)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val14" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(14)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name15"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n15">Paneer Pokora</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price15">200</span></p></div>
+                        <div id="add15" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('15')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant15" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(15)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val15" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(15)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name16"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n16">Paneer Tikka</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price16">260</span></p></div>
+                        <div id="add16" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('16')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant16" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(16)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val16" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(16)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <p style="color:#999999; font-size:15px;">MAIN COURSE</p>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name17"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n17">Sagar Special Yellow Dal Tadka</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price17">245</span></p></div>
+                        <div id="add17" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('17')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant17" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(17)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val17" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(17)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name18"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n18">Dal Makhani</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price18">255</span></p></div>
+                        <div id="add18" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('18')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant18" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(18)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val18" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(18)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name19"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n19">Mixed Vegetables</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price19">225</span></p></div>
+                        <div id="add19" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('19')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant19" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(19)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val19" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(19)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name20"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n20">Mushroom Masala</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price20">295</span></p></div>
+                        <div id="add20" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('20')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant20" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(20)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val20" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(20)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name21"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n21">Kadhai Paneer</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price21">310</span></p></div>
+                        <div id="add21" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('21')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant21" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(21)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val21" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(21)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <p style="color:#999999; font-size:15px;">SANGI SAATHI</p>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name22"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n22">Green Salad</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price22">115</span></p></div>
+                        <div id="add22" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('22')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant22" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(22)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val22" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(22)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name23"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n23">Mixed Raita</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price23">145</span></p></div>
+                        <div id="add23" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('23')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant23" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(23)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val23" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(23)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name24"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n24">Boondi Raita</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price24">150</span></p></div>
+                        <div id="add24" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('24')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant24" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(24)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val24" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(24)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <p style="color:#999999; font-size:15px;">TANDOOR SE</p>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name25"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n25">Roti</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price25">35</span></p></div>
+                        <div id="add25" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('25')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant25" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(25)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val25" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(25)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name26"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n26">Butter Roti</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price26">45</span></p></div>
+                        <div id="add26" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('26')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant26" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(26)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val26" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(26)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name27"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n27">Plain Naan</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price27">65</span></p></div>
+                        <div id="add27" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('27')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant27" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(27)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val27" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(27)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name28"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n28">Butter Naan</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price28">75</span></p></div>
+                        <div id="add28" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('28')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant28" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(28)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val28" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(28)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name29"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n29">Garlic Naan</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price29">85</span></p></div>
+                        <div id="add29" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('29')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant29" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(29)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val29" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(29)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="chinese">
+                    <h2>Chinese</h2>  
+                    <div class="row  margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name30"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n30">Veg Spring Roll</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price30">225</span></p></div>
+                        <div id="add30" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('30')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant30" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(30)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val30" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(30)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row  margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name31"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n31">Honey Chilli Potatoes</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price31">225</span></p></div>
+                        <div id="add31" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('31')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant31" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(31)"style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val31" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(31)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name32"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n32">Crispy Veg</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price32">245</span></p></div>
+                        <div id="add32" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('32')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant32" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(32)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val32" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(32)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name33"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n33">Veg Manchurian Dry</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price33">245</span></p></div>
+                        <div id="add33" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('33')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant33" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(33)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val33" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(33)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name34"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n34">Veg Chowmein</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price34">215</span></p></div>
+                        <div id="add34" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('34')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant34" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(34)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val34" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(34)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin- Bottom">
+                        <div class="col-sm-9"><h4 id="name35"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n35">Veg Schezwan Fried Rice</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price35">215</span></p></div>
+                        <div id="add35" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('35')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant35" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(35)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val35" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(35)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="dessert">
+                    <h2>Dessert</h2>  
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name36"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n36">Sweet Lassi</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price36">100</span></p></div>
+                        <div id="add36" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('36')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant36" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(36)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val36" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(36)" style="outline: none;">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name37"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n37">Gulab Jamun(Two Pcs)</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price37">105</span></p></div>
+                        <div id="add37" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('37')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant37" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(37)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val37" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(37)" style="outline: none; ">+</button>
+                        </div>
+                    </div>
+                    <div class="row margin-Bottom">
+                        <div class="col-sm-9"><h4 id="name38"><img class="vegicon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Indian-vegetarian-mark.svg/768px-Indian-vegetarian-mark.svg.png">&nbsp<span id="n38">Rava Keseri - Small</span></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8377;<span id="price38">60</span></p></div>
+                        <div id="add38" class="col-sm-3 btn-padding">
+                            <button onclick="quantButton('38')" class="btn btn-default Add" style="outline: none;">Add <span style="color:red;">+</span></button>
+                        </div>
+                        <div id="quant38" class="col-sm-3 btn-group btn-padding" style="display:none;">
+                            <button class="btn btn-default side-button" onclick="quantDec(38)" style="outline: none;">-</button>
+                            <button class="btn btn-default middle-button" id="val38" disabled>0</button>
+                            <button class="btn btn-default side-button" onclick="quantInc(38)" style="outline: none; ">+</button>
+                        </div>
+                    </div><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class=" navbar navbar-fixed-bottom" style="padding-bottom:0;">
+            <div class="container">
+                <div id="cartHeader" class="row" style="z-index: 100000;background-color:#F0F0F0;position: sticky;top:0;">
+                    <div style="float: left;"><h2>Your Orders:</h2></div>
+                    <div style="float: right;"><button onclick="viewCart()"><span class="glyphicon glyphicon-remove" style="width: 5px; height:5px;"></span></button></div>
+
+                </div>
+                <div id="cart">
+                    <!--Text input by javascript -->
+                </div>
+                <div  id="cartButtonDiv" class="b" style="background-color: lightgrey;position: sticky;bottom:0;">
+                    <button id="viewCartButton" onclick="viewCart()"><span class="glyphicon glyphicon-chevron-up"></span></button>
+                    &nbsp;&nbsp;&nbsp;Your Orders (<span id="items">0</span>)
+                    <div style="float: right" class="b">Subtotal is: &#8377;<span id="subtotal">0</span>&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-default" onclick="clearCart()" style="height:37px; width: 100px;">Clear Cart</button>
+                        <button class="btn btn-danger btn-md" onclick="payment()" style="height:35px; width: 100px;">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

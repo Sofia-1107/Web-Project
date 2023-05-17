@@ -1,0 +1,35 @@
+label{
+    font-weight: normal;
+    font-size: large;
+    padding-top: 10px;
+}
+#details button{outline: 0px;
+                margin-left: -15px;
+                border-radius: 15px;
+                width: 90%;}
+
+.price{text-align: right;}
+
+.name,.price{font-size: 16px;margin-left: -5px;padding-bottom: 10px;}
+
+h2{margin-left: -20px;margin-bottom: 40px;}
+.vegicon{
+    width:15px;
+    height:15px;
+    float:right;
+}
+.vegiconProp{padding-right: 0px;
+             padding-top: 5px;}
+.subprice{font-weight: normal;}
+
+#order-summary h2{margin: 0px;}
+#order-summary{border-bottom:1px solid grey;background-color: #f8f8f8;border-bottom: 0.1rem solid #e8e8e8;
+               border-radius: 10px 10px 0px 0px; padding:25px 10px;
+               font-family: Okra,Helvetica,sans-serif;
+}
+#table{padding: 20px 0px;}
+#support{background-color: #f8f8f8;
+         color: #828282;padding: 15px;}
+
+#clearButtonLink{text-decoration: none;color:red;cursor: pointer;}
+#order-summary-div{border: 1px solid #f8f8f8; border-radius: 10px; padding-left: 15px;padding-right: 15px;}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS Files/payments.css">
+        <script type="text/javascript" src="JS Files/payments.js"></script>
+    <head>
+    <body onload="begin()">
+        <div class="navbar navbar-fixed-top" style="background-color: white;">
+            <div class="container">
+                <h1><a href="index.html"><img src="Images/Sagar Ratna.png" style="height:100px;"></a></h1>
+                <div style=" border-bottom: 1px solid grey;"></div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 140px;">
+            <h1 style="margin-left: -15px;">Secure Checkout</h1><br>
+            <form class="form-horizontal" method="get" action="reciept.html">
+                <textarea style="display:none;" name="orderSummary" id="textarea"></textarea>
+                <textarea style="display: none;" name='paymentIndex' id="paymentIndex" required></textarea>
+                <div class="col-md-7" id="details">
+                    <h2>Your Details</h2>
+                    <div class="form-group">
+                        <label class="col-sm-3">Your Name</label>
+                        <div class="col-sm-7"><input class="form-control input-lg" type="text" name="name" required></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Contact No.</label>
+                        <div class="col-sm-7"><input class="form-control input-lg" type="number" name="number" min="1000000000" max="9999999999" required></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Email</label>
+                        <div class="col-sm-7"><input class="form-control input-lg" type="email" name="email" required></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">Address</label>
+                        <div class="col-sm-7"><input class="form-control input-lg" type="text" name="address" required></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">City</label>
+                        <div class="col-sm-7"><input class="form-control input-lg" type="text" name="city" required></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3">ZIP</label>
+                        <div class="col-sm-7"><input class="form-control input-lg" type="number" name="zip" min="100000" max="999999" required></div>
+                    </div>
+                    <br>
+                    <h2>Select Payment Method</h2>
+                    <button class="btn btn-lg btn-default" type="button" onclick="paymentMethod('card')"> Debit Card/Credit Card<img src="images/cardpayment.png"></button>
+                    <div id="card">
+                        <!-- input fields entered bu javascript -->
+                    </div>
+                    <button class="btn btn-lg btn-default" type="button" onclick="paymentMethod('paytm')">Paytm wallet<img src="images/paytm.png"></button>
+                    <div class="form-group" id="paytm">
+                        <!-- input fields entered bu javascript -->
+                    </div>
+                    <button class="btn btn-lg btn-default" type="button" onclick="paymentMethod('upi')" style="margin-top: -15px;">UPI<img src="images/UPI.png"></button>
+                    <div class="form-group" id="upi">
+                        <!-- input fields entered bu javascript -->
+                    </div>
+                    <br><br><br>
+                </div>
+                <div class="col-md-4 col-sm-9" style="margin-left: -15px;"> 
+                    <div id="order-summary-div">
+                        <div class="row"  id="order-summary">
+                            <h2>Order Summary</h2>
+                        </div>
+                        <div class="row cart" id="table">
+                            <!-- text input by javascript -->
+                        </div>
+                        <div class="row" id="support">
+                            <h3>Support our Riders</h3>
+                            <p>Our riders are risking their lives to serve the nation. While we are doing our best to support them, we request you to tip them generously in these difficult times, if you can afford it.</p>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <button type="button" class="btn btn-default" onclick="addTip(25);" style="outline: none;">+25</button>
+                                    <button type="button" class="btn btn-default" onclick="addTip(50);" style="outline: none;">+50</button>
+                                    <button type="button" class="btn btn-default" onclick="addTip(100);" style="outline: none;">+100</button>
+                                </div>
+                                <div class="col-sm-4" id="tipDiv1" style="display: none;">
+                                    <span id="tip1"></span><br>
+                                    <a onclick="clearTip()" id="clearButtonLink">Clear</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 10px;background-color: #f3dddd;border-radius:0px 0px 10px 10px;">
+                            <div class="col-sm-7 name">Subtotal</div><div class="col-sm-5 price" id="subtotal"></div>
+                            <div class="col-sm-7 name">Taxes and Charges</div><div class="col-sm-5 price" id="tax"></div>
+                            <div id="tipDiv2" style="display: none;">
+                                <div class="col-sm-7" style="margin-left: -5px;">Tip</div><div class="col-sm-5 price" id="tip2" style="margin-left: -5px;"></div>                                   
+                            </div>
+                            <div class="col-sm-12"><hr style="border:1px solid lightgrey;"></div>
+                            <div class="col-sm-7 name"><b>Grand Total</b></div><div class="col-sm-5 price" id="grandtotal"></div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin:20px 0px 50px;">
+                        <button type="submit" onclick="reciept()" class="btn btn-danger" style="width: 100%;">Place Order</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

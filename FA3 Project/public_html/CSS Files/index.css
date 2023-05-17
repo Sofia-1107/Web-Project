@@ -1,0 +1,85 @@
+.vegicon{
+    width:15px;
+    height:15px;
+}
+.b
+{
+    font-size:18px;
+    font-family:Arial;
+    font-weight:bold;
+}
+#footer{
+    max-height: 600px; 
+    overflow: auto;
+    display: none;
+    background-color:lightgrey; 
+}
+#cart{
+    display:none; 
+    padding: 10px;
+    padding-left: 30px;
+    padding-bottom:50px;
+    background-color:#F0F0F0; 
+    font-size:18px;
+}
+.viewCartButton{
+    color: black;
+    padding-top: 5px; 
+    padding-left: 8px;
+}
+#cartButtonDiv{
+    display: inherit; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#cartHeader{
+    display:none; 
+    padding: 10px;
+    background-color:#F0F0F0; 
+    font-size:18px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%; 
+    border-radius:10px 10px 0px 0px; 
+}
+#sidebar{margin-right: -30px;}
+img{
+    width: 33%;
+    height: 300px;
+}
+#sidebar button,#cartHeader button{outline:none;}
+#cartHeader button{border:none;
+                   margin: 10px;
+                   margin-right: 20px;}
+#container h2{margin-left:-15px;
+              position: sticky;
+              top:225px;
+              z-index: +1;
+              background-color: white;
+              padding:20px 0px;}
+#sidebar button{width: 85%;
+                height: 50px;
+                text-align: left;
+                background-color: inherit;
+                border:none;
+                font-size:20px;
+                text-decoration: none;
+                outline: none;
+                color:black;}
+#sidebar button:hover{
+    background-image:linear-gradient(to right, #d9534f,white);
+    color:white ;
+}
+.img{
+	width:125px;
+	height:125px; 
+	border-radius:10px;
+}
+#menu h2{
+    margin-left: -20px;
+}
+.margin-Bottom{margin-bottom: 5px;}
+.Add{width:75px;}
+.btn-padding{padding-top: 5px;}
+.side-button{color: red;border-color: black;}
+.middle-button{background-color:#f5dae3;border-top:1px solid black;border-bottom:1px solid black;font-weight: bold;}

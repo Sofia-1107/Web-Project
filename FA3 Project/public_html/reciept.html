@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>reciept</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS Files/reciept.css">
+        <script type="text/javascript" src="JS Files/reciept.js"></script>
+    </head>
+    <body onload="begin()">
+        <div class="container">
+            <div class="col-md-7 col-md-offset-2">
+                <div class="row">
+                    <h1 style="border-bottom: 1px solid black;"><img src="Images/Sagar Ratna.png" style="height: 100px;"></h1>
+                    <p>Thank you for ordering from Sagar Ratna. Your order has been confirmed. Here is your <b>E-reciept</b>. Our rider's details will be shared with you soon through the contact details provided by you.</p><br>
+                </div>
+                <div class="row" style="margin-bottom:15px;">
+                    <div class="col-sm-6" style="padding-left: 0px;">
+                        <p><b>Transaction ID</b><br><span id="TID"></span><br>
+                            <b>Transaction Date and Time</b><br><span id="TD"></span></p>
+                    </div>
+                    <div class="col-sm-6 right">
+                        <p><b>Delivery Address</b><br><span id="deliveryAddress"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <table class="table table-bordered" id="table" style="border:none;">
+                        <tr>
+                            <th style='border-left:none; padding: 15px;'>Item</th>
+                            <th class="right" style="padding: 15px;">Price</th>
+                            <th class="right" style="padding: 15px;">Quantity</th>
+                            <th class="right" style='border-right:none;padding: 15px;'>Total Price</th>
+                        </tr>
+                        <!-- text input by javascript -->
+                    </table>
+                </div>
+                <div class="row" style="margin: 20px 0px 50px 0px;">
+                    <div class="col-sm-6" style="padding-left: 0px;">
+                        <p><b>Payment Details</b><br><span id="paymentDetails"></span></p>
+                    </div>
+                    <div class="col-sm-6 right" style="padding-right: 0px;">
+                        <p><b>Restaurant Address</b><br>325,Maheshpur Road<br>Near Jack and Jones and Reliance Digital,<br>Sector-9, Panchkula</p>
+                    </div>
+                </div>
+                <div id="buttons" style="text-align: right;display: block;">
+                    <a href="index.html"><button type="button" class="btn btn-danger">Order more Food</button></a>
+                    <button type="button" class="btn btn-primary" onclick="printReciept()">Print Reciept</button>
+                </div>
+                <br><br><br><br>
+            </div>
+        </div>
+    </body>
+</html>
